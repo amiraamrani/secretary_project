@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Student Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/student.css">
+</head>
+<body>
+
+<a href="{% url 'login' %}" class="back-arrow">← Back</a>
+
+
+<div class="container">
+    <h2>Welcome to Student Page</h2>
+    <p class="welcome-message">We're happy to have you here. You're now part of our student community!</p>
+
+    <div class="nav-buttons">
+        <button onclick="navigateToRequestForm()">📈 Improve Grade</button>
+        <button onclick="navigateToProfile()">👤 My Profile</button>
+        <button onclick="navigateToOfficeHours()">🕒 Office Hours</button>
+        <button onclick="navigateToUpdateProfile()">📝 Update Profile</button>
+
+    </div>
+
+
+</div>
+
+<script>
+    function navigateToRequestForm() {
+        window.location.href = "request_form/";
+    }
+
+function navigateToProfile() {
+  window.location.href = "/create-profile/";
+}
+
+
+    function navigateToOfficeHours() {
+        window.location.href = "/office_hours/";
+    }
+function navigateToUpdateProfile() {
+    window.location.href = "/update-profile/";
+}
+
+</script>
+
+</body>
+</html>
